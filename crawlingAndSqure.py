@@ -30,7 +30,7 @@ for el in files:
             new_size = x
             x_offset = 0
             y_offset = int((x-y)/2)
-        elif y>x:
+        else :
             new_size = y
             x_offset = int((y-x)/2)
             y_offset = 0
