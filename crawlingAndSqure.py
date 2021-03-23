@@ -3,7 +3,7 @@ import os
 from PIL import Image
 
 
-image_name = "스쿼트 자세"
+image_name = "스쿼트 자세" #크롤링할 키워드와 폴더명
 # 사진 크롤링
 response = google_images_download.googleimagesdownload()   #class instantiation
 
