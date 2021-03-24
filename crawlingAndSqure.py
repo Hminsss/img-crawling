@@ -30,16 +30,23 @@ for el in files:
             new_size = x
             x_offset = 0
             y_offset = int((x-y)/2)
-        else :
+            background_color ="black"
+            new_image = Image.new("RGBA", (new_size,new_size), background_color)
+            new_image.paste(image, (x_offset,y_offset))
+
+            outfile_name= ".".join(splt) + ".png"
+            new_image.save(output_dir + "/"+ outfile_name)
+        elif y>x :
             new_size = y
             x_offset = int((y-x)/2)
             y_offset = 0
+            background_color ="black"
+            new_image = Image.new("RGBA", (new_size,new_size), background_color)
+            new_image.paste(image, (x_offset,y_offset))
 
-        background_color ="black"
-        new_image = Image.new("RGBA", (new_size,new_size), background_color)
-        new_image.paste(image, (x_offset,y_offset))
+            outfile_name= ".".join(splt) + ".png"
+            new_image.save(output_dir + "/"+ outfile_name)
 
-        outfile_name= ".".join(splt) + ".png"
-        new_image.save(output_dir + "/"+ outfile_name)
+
 
   #printing absolute paths of the downloaded images 
